@@ -33,9 +33,9 @@ function setup() {
   let rgb21c2 = rgb21c1 + floor(random(-1 * colorVariation, colorVariation));
   let rgb22c2 = rgb22c1 + floor(random(-1 * colorVariation, colorVariation));
   let rgb23c2 = rgb23c1 + floor(random(-1 * colorVariation, colorVariation));
-  let textrgb1;
-  let textrgb2;
-  let textrgb3;
+  let textrgb1 = 0;
+  let textrgb2 = 0;
+  let textrgb3 = 0;
   if (random() < 0.5) {
     textrgb1 = rgb1;
     textrgb2 = rgb2;
@@ -52,53 +52,38 @@ function setup() {
   fullscreen();
 
   // generate point for empty space
-  const e1 = random(wide * (1 / 4), wide * (9 / 16)); // x
-  const e2 = random(high * (3 / 16), high * (3 / 4)); // y
+  const e1 = random(wide * (1 / 4), wide * (9 / 16)) + 40; // x
+  const e2 = random(high * (3 / 16), high * (3 / 4)) + 40; // y
 
-  // get and print random text
-  //   fetch(url)
-  //     .then(res => res.json())
-  //     .then(out => {
-  //       console.log("this is json ", out);
-  //       tempRandText = out.text_out;
-  //       for (let i = 9; i < tempRandText.length; i++) {
-  //         if (tempRandText[i] == "<") {
-  //           tempRandText = "";
-  //         } else {
-  //           randText += tempRandText[i];
-  //         }
-  //       }
-  //       //randText = randText.toLowerCase();
-  //       randText = randText.toUpperCase();
-  //       console.log(randText);
-  //       // write text in open space
-  //       //set size
-  //       textSize(random(20) + 60);
-  //       //set color
-  //       stroke(textrgb1, textrgb2, textrgb3);
-  //       //set style
-  //       if (random() < 0.33) {
-  //         textStyle(NORMAL);
-  //       } else if (random() < 0.5) {
-  //         textStyle(ITALIC);
-  //       } else {
-  //         textStyle(BOLD);
-  //       }
+  // write text in open space
 
-  //       //Set Font
-  //       let fntIndex = floor(random(fonts.length));
-  //       textFont(fonts[fntIndex]);
-  //       console.log(fonts[fntIndex]);
-  //       //Draw Text
-  //       text(randText, e1 - 20 * randText.length, e2 - 100); // x shift due to string length, but y shift is arbitrary
-  //       console.log("string written");
-  //     })
-  //     .catch(err => {
-  //       throw err;
-  //     });
+  /* TITLE */
 
+  //set size
+  textSize(60);
+  //set color
+  stroke(textrgb1, textrgb2, textrgb3);
+  fill(textrgb1, textrgb2, textrgb3);
+  //Set Font
+  textFont("Georgia");
+  //Draw Text
+  text("Sam Parsons", e1 - 20 * "Sam Parsons".length, e2 - 100); // x shift due to string length, but y shift is arbitrary
+
+  /* SUBTEXT */
+  //set size
+  textSize(20);
+  //set color
+  stroke(textrgb1, textrgb2, textrgb3);
+  fill(textrgb1, textrgb2, textrgb3);
+  //Set Font
+  textFont("Georgia");
+  //Draw Text
+  text("creativity through code", e1 - 150, e2 - 60); // x shift due to string length, but y shift is arbitrary
+
+  // keeps track of how many lines are drawn
   let index = 0;
 
+  // line creation loop
   while (index < limit) {
     //vertical or horizontal with set degrees play
     let angle = random(anglePlay / 2) + angleOffset;
@@ -141,7 +126,6 @@ function setup() {
     // if the coordinates of both points are not within a given distance
     // of the empty space coordinates
     if (abs(e1 - x1) < thresh && abs(e2 - y1) < thresh) {
-      //console.log('origin point too close to empty space');
     } else if (abs(e2 - sameX) < thresh) {
     } else if (abs(e1 - sameY) < thresh) {
     } else {

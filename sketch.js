@@ -11,7 +11,7 @@ function setup() {
   const angleOffset = random(5); //offset axes TBD
   const colorVariation = 90;
   const childVariation = 60;
-  const limit = 12; // specifies number of parent lines produced
+  const limit = 9; // specifies number of parent lines produced
   const perpendicular = true; //true if want perpendicular pattern, false if only horizontal
 
   //Random Variables
@@ -52,7 +52,7 @@ function setup() {
   fullscreen();
 
   // generate point for empty space
-  const e1 = random(wide * (1 / 4), wide * (9 / 16)) + 40; // x
+  const e1 = random(wide * (1 / 4), wide * (9 / 16)) + 260; // x
   const e2 = random(high * (3 / 16), high * (3 / 4)) + 40; // y
 
   // write text in open space
@@ -74,11 +74,12 @@ function setup() {
   textSize(20);
   //set color
   stroke(textrgb1, textrgb2, textrgb3);
-  fill(textrgb1, textrgb2, textrgb3);
+  fill(rgb21, rgb22, rgb23);
   //Set Font
   textFont("Georgia");
+  textStyle(ITALIC);
   //Draw Text
-  text("creativity through code", e1 - 150, e2 - 60); // x shift due to string length, but y shift is arbitrary
+  text("creativity through code", e1 - 150, e2 - 65); // x shift due to string length, but y shift is arbitrary
 
   // keeps track of how many lines are drawn
   let index = 0;
@@ -283,3 +284,5 @@ function setup() {
     }
   }
 }
+
+function draw() {}

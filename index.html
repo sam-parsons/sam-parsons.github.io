@@ -7,7 +7,6 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/cfbfeb1039.js"></script>
-    <style></style>
   </head>
   <body>
     <section class="main">
@@ -18,12 +17,25 @@
             <h3>software engineer | new york, ny</h3>
           </div>
           <div class="icons">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin-in"> </i>
-            <i class="fab fa-npm"> </i>
+            <i class="fab fa-github icon" id="github"></i>
+            <i class="fab fa-linkedin-in icon" id="linkedin"> </i>
           </div>
         </div>
       </div>
     </section>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const links = {
+        github: "https://github.com/sam-parsons",
+        linkedin: "https://www.linkedin.com/in/samlparsons/"
+      };
+      $(".icon").on("click", e => {
+        window.open(links[e.target.id], "_self");
+      });
+    </script>
   </body>
 </html>

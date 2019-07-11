@@ -42,4 +42,8 @@ h3 {
 .icons i {
   margin: 0 10px;
   color: white;
+  cursor: pointer;
+}
+.icons i:hover {
+  color: rgb(88, 112, 254);
 }

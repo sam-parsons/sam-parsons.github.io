@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+
 html,
 body {
   margin: 0;
@@ -31,12 +33,13 @@ h3 {
   margin: 0 auto;
 }
 .subtext {
-  font-size: 26px;
+  font-size: 22px;
+  font-family: "Indie Flower";
 }
 .icons {
   margin: 20px auto;
 }
-.icons a {
+.icons i {
   margin: 0 10px;
   color: white;
 }

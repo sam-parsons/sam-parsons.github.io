@@ -47,3 +47,20 @@ h3 {
 .icons i:hover {
   color: rgb(88, 112, 254);
 }
+.top-nav {
+  background: rgba(0, 0, 0, 0.5);
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+.link {
+  margin: 50px 35px;
+}
+.link a {
+  color: white;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}

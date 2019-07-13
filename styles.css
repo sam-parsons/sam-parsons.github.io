@@ -63,3 +63,10 @@ h3 {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 450px) {
+  #name-title {
+    font-size: 100%;
+  }
+}

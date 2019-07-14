@@ -10,8 +10,29 @@
   </head>
   <body>
     <section class="top-nav">
-      <div class="navbar">
-        <div class="blog link">
+      <nav class="navbar">
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="links">
+          <ul class="links-ul">
+            <li class="link">
+              <a
+                href="https://elated-booth-60578c.netlify.com/"
+                class="blog-link"
+                >Blog</a
+              >
+            </li>
+            <li class="link">
+              <a href="mailto:samparsons269@gmail.com" class="contact-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="blog link">
           <a href="https://elated-booth-60578c.netlify.com/" class="blog-link"
             >Blog</a
           >
@@ -20,8 +41,8 @@
           <a href="mailto:samparsons269@gmail.com" class="contact-link"
             >Contact</a
           >
-        </div>
-      </div>
+        </div> -->
+      </nav>
     </section>
     <section class="main">
       <div class="title">
@@ -49,6 +70,14 @@
       };
       $(".icon").on("click", e => {
         window.open(links[e.target.id], "_self");
+      });
+
+      const toggle = document.getElementsByClassName("toggle-button")[0];
+      const navLinks = document.getElementsByClassName("links")[0];
+
+      toggle.addEventListener("click", () => {
+        console.log("toggle");
+        navLinks.classList.toggle("active");
       });
     </script>
   </body>

@@ -63,22 +63,6 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script>
-      const links = {
-        github: "https://github.com/sam-parsons",
-        linkedin: "https://www.linkedin.com/in/samparsons269/"
-      };
-      $(".icon").on("click", e => {
-        window.open(links[e.target.id], "_self");
-      });
-
-      const toggle = document.getElementsByClassName("toggle-button")[0];
-      const navLinks = document.getElementsByClassName("links")[0];
-
-      toggle.addEventListener("click", () => {
-        console.log("toggle");
-        navLinks.classList.toggle("active");
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

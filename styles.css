@@ -4,9 +4,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  background: url("./assets/paint.jpg");
+  height: 100vh;
+  width: 100vw;
+  background: url("./assets/paint.jpg") no-repeat;
   background-size: cover;
 }
 .main {
@@ -47,7 +47,8 @@ h3 {
   color: rgb(88, 112, 254);
 }
 .top-nav {
-  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
 }
 .navbar {
   display: flex;
@@ -60,6 +61,12 @@ h3 {
 .link {
   margin: 50px 35px;
   list-style: none;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+.link:hover {
+  background-color: rgb(88, 112, 254);
 }
 .link a {
   color: white;

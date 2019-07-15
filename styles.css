@@ -9,12 +9,12 @@ body {
   background: url("./assets/paint-small.jpg") no-repeat;
   filter: blur(0.4px);
   background-size: cover;
-  transition: all 1.3s;
 }
 body.loaded {
   background: url("./assets/paint.jpg") no-repeat;
   filter: blur(0);
   background-size: cover;
+  transition: blur 1s;
 }
 .main {
   height: 100%;
@@ -127,10 +127,17 @@ footer {
   }
   .toggle-button {
     display: flex;
+    transition: transform 0.5s;
+  }
+  .toggle-button.active {
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
   }
   .links {
     display: none;
     width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
   }
   .links.active {
     display: flex;
@@ -145,7 +152,8 @@ footer {
   }
   .links li {
     text-align: center;
-    margin: 10px auto;
+    margin: 5px auto;
+    /* background: rgba(0, 0, 0, 0.3); */
   }
   .navbar {
     flex-direction: column;

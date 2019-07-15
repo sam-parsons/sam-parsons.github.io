@@ -15,6 +15,7 @@ const navLinks = document.getElementsByClassName("links")[0];
 
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+  toggle.classList.toggle("active");
 });
 
 // lazy load

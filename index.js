@@ -14,3 +14,9 @@ const navLinks = document.getElementsByClassName("links")[0];
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+const body = document.getElementsByTagName("body")[0];
+
+setTimeout(() => {
+  body.classList.toggle("loaded");
+}, 1000);

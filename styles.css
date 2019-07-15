@@ -81,7 +81,6 @@ h3 {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
 }
-
 .toggle-button {
   position: absolute;
   top: 35px;
@@ -93,12 +92,29 @@ h3 {
   height: 20px;
   z-index: 3;
 }
-
 .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
+}
+.footer-section {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100%;
+}
+footer {
+  text-align: end;
+}
+.footer {
+  color: white;
+  font-size: 12px;
+}
+.footer-icon {
+  color: white;
+  margin: auto 4px;
+  font-size: 12px;
 }
 
 /* Media Queries */

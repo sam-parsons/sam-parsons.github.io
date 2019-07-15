@@ -1,7 +1,9 @@
 // body link event listeners
 const links = {
   github: "https://github.com/sam-parsons",
-  linkedin: "https://www.linkedin.com/in/samparsons269/"
+  linkedin: "https://www.linkedin.com/in/samparsons269/",
+  codepen: "https://codepen.io/collection/nGvkZJ/",
+  npm: "https://www.npmjs.com/~sam-parsons"
 };
 $(".icon").on("click", e => {
   window.open(links[e.target.id], "_self");

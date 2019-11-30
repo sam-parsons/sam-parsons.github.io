@@ -6,16 +6,12 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: url("./assets/paint-small.jpg") no-repeat;
-  filter: blur(0.4px);
+  background: url("./assets/paint-final.jpg") no-repeat;
   background-size: cover;
+  /* filter: blur(1);
+  transition: blur 1s; */
 }
-body.loaded {
-  background: url("./assets/paint.jpg") no-repeat;
-  filter: blur(0);
-  background-size: cover;
-  transition: blur 1s;
-}
+
 .main {
   height: 100%;
   width: 100%;
@@ -100,8 +96,8 @@ h3 {
 }
 .footer-section {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   width: 100%;
 }
 footer {

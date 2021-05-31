@@ -42,12 +42,8 @@
             <h2>software engineer | new york, ny</h2>
           </div>
           <div class="icons">
-            <a href="https://github.com/sam-parsons">
-              <i class="fab fa-github icon" id="github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/samparsons269/">
-              <i class="fab fa-linkedin-in icon" id="linkedin"> </i>
-            </a>
+            <i class="fab fa-github icon" id="github"></i>
+            <i class="fab fa-linkedin-in icon" id="linkedin"> </i>
           </div>
         </div>
       </div>
@@ -60,6 +56,18 @@
       </footer>
     </section>
     <script>
+      // attach click listeners for github and linkedin icons
+      const links = {
+        github: "https://github.com/sam-parsons",
+        linkedin: "https://www.linkedin.com/in/samparsons269/"
+      }
+      const icons = document.querySelectorAll('.icon');
+      icons.forEach(icon => {
+        icon.addEventListener('click', e => {
+          window.open(links[e.target.id], "_self");
+        })
+      })
+
       // navbar expansion event listener
       const toggle = document.getElementsByClassName("toggle-button")[0];
       const navLinks = document.getElementsByClassName("links")[0];

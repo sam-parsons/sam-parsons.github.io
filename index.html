@@ -20,11 +20,6 @@
         body.style.display = "block";
       }
     </script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
     <script src="https://kit.fontawesome.com/cfbfeb1039.js"></script>
   </head>
   <body style="display: block;">
@@ -61,8 +56,12 @@
             <h3>software engineer | new york, ny</h3>
           </div>
           <div class="icons">
-            <i class="fab fa-github icon" id="github"></i>
-            <i class="fab fa-linkedin-in icon" id="linkedin"> </i>
+            <a href="https://github.com/sam-parsons">
+              <i class="fab fa-github icon" id="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/samparsons269/">
+              <i class="fab fa-linkedin-in icon" id="linkedin"> </i>
+            </a>
           </div>
         </div>
       </div>
@@ -75,15 +74,6 @@
       </footer>
     </section>
     <script>
-      // body link event listeners
-      const links = {
-        github: "https://github.com/sam-parsons",
-        linkedin: "https://www.linkedin.com/in/samparsons269/",
-      };
-      $(".icon").on("click", e => {
-        window.open(links[e.target.id], "_self");
-      });
-
       // navbar expansion event listener
       const toggle = document.getElementsByClassName("toggle-button")[0];
       const navLinks = document.getElementsByClassName("links")[0];

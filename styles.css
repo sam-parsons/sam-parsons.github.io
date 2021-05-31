@@ -8,8 +8,6 @@ body {
   width: 100vw;
   background: url('./assets/paint-final.jpg') no-repeat;
   background-size: cover;
-  /* filter: blur(1);
-  transition: blur 1s; */
 }
 
 .main {
@@ -31,7 +29,7 @@ body {
   font-family: 'IM Fell English SC', serif;
 }
 .title-name h1,
-h3 {
+h2 {
   margin: 0 auto;
 }
 .subtext {
@@ -149,7 +147,6 @@ footer {
   .links li {
     text-align: center;
     margin: 5px auto;
-    /* background: rgba(0, 0, 0, 0.3); */
   }
   .navbar {
     flex-direction: column;

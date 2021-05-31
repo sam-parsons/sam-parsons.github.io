@@ -4,8 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Personal website of Sam Parsons - 2021" />
     <title>Sam Parsons</title>
+    <link href="./assets/paint-final.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      // ...
+      const img = document.createElement('img')
+      img.setAttribute('src', "./assets/paint-final.jpg");
+      img.onload = function() {
+        const body = document.getElementsByTagName("body")[0];
+        console.log('hello', body)
+
+        body.style.display = "block";
+      }
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -13,7 +27,7 @@
     ></script>
     <script src="https://kit.fontawesome.com/cfbfeb1039.js"></script>
   </head>
-  <body>
+  <body style="display: block;">
     <section class="top-nav">
       <nav class="navbar">
         <a href="#" class="toggle-button">
@@ -78,12 +92,6 @@
         navLinks.classList.toggle("active");
         toggle.classList.toggle("active");
       });
-
-      // lazy load
-      const body = document.getElementsByTagName("body")[0];
-      setTimeout(() => {
-        body.classList.toggle("loaded");
-      }, 0);
     </script>
   </body>
 </html>

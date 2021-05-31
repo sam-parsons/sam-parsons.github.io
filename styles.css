@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: url("./assets/paint-final.jpg") no-repeat;
+  background: url('./assets/paint-final.jpg') no-repeat;
   background-size: cover;
   /* filter: blur(1);
   transition: blur 1s; */
@@ -28,7 +28,7 @@ body {
 .title-name {
   color: #ffffff;
   font-size: 50px;
-  font-family: "IM Fell English SC", serif;
+  font-family: 'IM Fell English SC', serif;
 }
 .title-name h1,
 h3 {
@@ -36,7 +36,7 @@ h3 {
 }
 .subtext {
   font-size: 16px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 .icons {
   margin: 20px auto;
@@ -74,7 +74,7 @@ h3 {
 .link a {
   color: white;
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
 .toggle-button {
